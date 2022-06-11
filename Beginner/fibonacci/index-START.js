@@ -6,7 +6,22 @@ where the sequence is:
 
 
 function fibonacci(n) {
-    // Code goes here
+    let prevNum = 0
+    let currentNum = 1
+    let fib = 0
+    let i = 0
+
+    while(i < n){
+    i++
+    
+    fib = prevNum + currentNum
+    prevNum = currentNum
+    currentNum = fib
+
+    console.log('prevNum:', prevNum, 'currentNum:', currentNum, 'fib:', fib)
+    }
+    return fib
 }
+
 
 module.exports = fibonacci
